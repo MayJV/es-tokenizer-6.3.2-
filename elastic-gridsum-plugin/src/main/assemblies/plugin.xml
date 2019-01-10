@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<assembly>
+    <id>analysis-gridsum</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}/src/main/resources</directory>
+            <outputDirectory>/gridsum</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+    <!--<files>-->
+    <!--<file>-->
+    <!--<source>${project.basedir}/src/main/resources/plugin-descriptor.properties</source>-->
+    <!--<outputDirectory/>-->
+    <!--<filtered>true</filtered>-->
+    <!--</file>-->
+    <!--</files>-->
+
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/gridsum</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <excludes>
+                <exclude>org.elasticsearch:elasticsearch</exclude>
+                <exclude>org.apache.logging.log4j:log4j-api</exclude>
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+</assembly>
