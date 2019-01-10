@@ -1,6 +1,8 @@
 # 参考
 https://blog.csdn.net/frankcheng5143/article/details/82870319
 
+打包：
+clean package -Dmaven.test.skip
 
 GET _analyze
 {
